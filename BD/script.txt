@@ -1,0 +1,16 @@
+create schema clinicaVet;
+
+CREATE TABLE clinicaVet.atendimento (
+    id SERIAL PRIMARY key not NULL,
+    nome_pet VARCHAR(255) NOT NULL,
+    raca VARCHAR(30) NOT NULL,
+    idade VARCHAR(2) NOT NULL,
+    nome_tutor VARCHAR(255) NOT NULL,
+    diaAtendimento timestamp NOT NULL,
+    valorGasto integer NOT NULL
+);
+
+insert into clinicaVet.atendimento (nome_pet, raca, idade, nome_tutor, diaAtendimento,valorGasto)
+into
+('Mel', 'Shih-tzu', 4, 'Mariana Costa', 2026-09-01, 180),
+('Thor', 'Golden Retriever', 8, 'Rafael Lima', 2026-09-02, 320)
