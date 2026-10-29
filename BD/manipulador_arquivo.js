@@ -10,8 +10,13 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const caminhoDados = path.join(__dirname, "BD","tabela_atendimentos.json");
 
-
 // logica
 
+//listar todos - lê um arquivo local
+
+export async function listarTodos() {
+    const conteudo = await fs.readFile(caminhoDados, "utf-8");
+    
+}
 
 // funcões auxiliares
